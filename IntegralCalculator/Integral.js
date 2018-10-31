@@ -1,20 +1,23 @@
-var numRectangles = 10000;
-var width = 1/numRectangles;
+var numRectangles = 1000000;
+var width = 0.5*Math.PI/numRectangles;
 
 var height = new Array();
 
-
+y=0;
 for(var x = 0;x < numRectangles;x++)
 {
-  height[x]=Math.pow((x*width),3);
+  height[x]=Math.sin(y);
 
+  y+= width;
 }
+
 
 var totalArea = 0;
 
-for(var x = 0;x<height.length;x++)
+for(var j = 0;j<height.length;j++)
 {
-  totalArea += height[x]*width;
+  totalArea += height[j]*width;
+
 }
 
 var result = document.getElementById("area");
