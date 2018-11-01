@@ -1,5 +1,5 @@
 var numRectangles = 1000000;
-var width = 0.5*Math.PI/numRectangles;
+var width = Math.PI/numRectangles;
 
 var height = new Array();
 
